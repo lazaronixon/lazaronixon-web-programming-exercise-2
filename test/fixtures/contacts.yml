@@ -7,3 +7,9 @@ rosa:
   account: basecamp
   name: Rosa
   email_address: rosa@basecamp.com
+
+lazaro_nixon:
+  account: basecamp
+  name: Lázaro Nixon
+  email_address: lazaronixon@basecamp.com
+  import: lazaro_nixon

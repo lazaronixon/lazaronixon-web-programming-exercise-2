@@ -1,0 +1,31 @@
+.flash {
+  align-items: center;
+  animation: appear-then-fade 7s 300ms both;
+  backdrop-filter: blur(8px) contrast(0.8);
+  background-color: var(--color-bg--flash-notice);
+  border-radius: 4rem;
+  border: 0 solid;
+  color: var(--color-txt--reversed);
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  margin-block-start: 6.5rem;
+  margin-inline: auto;
+  min-block-size: 4rem;
+  padding: 0.5rem 1.6rem;
+  text-align: center;
+
+  [data-turbo-preview] & {
+    display: none;
+  }
+}
+
+@keyframes appear-then-fade {
+  0%, 100% { opacity: 0; }
+  5%, 60%  { opacity: 1; }
+}
+
+@keyframes appear-then-fade-extended {
+  0%, 100% { opacity: 0; }
+  2%, 90% { opacity: 1; }
+}

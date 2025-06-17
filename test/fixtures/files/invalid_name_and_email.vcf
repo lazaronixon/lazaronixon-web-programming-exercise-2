@@ -1,0 +1,6 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.15.7//EN
+ORG:Basecamp;
+TEL;type=CELL;type=VOICE;type=pref:555-123-4567
+END:VCARD

@@ -1,0 +1,38 @@
+<div class="sheet">
+  <header class="align--center">
+    <h1 class="hdg">Review your vCard import from <%= l(@import.created_at.to_date, format: :long) %></h1>
+  </header>
+
+  <% if @import.processing? %>
+    <section class="list--boxed push--block-end">
+      <strong>This import is still in progress.</strong><br>
+      <span>Please check back in a few minutes!</span>
+    </section>
+  <% else %>
+    <section class="list--boxed push--block-end">
+      <% if @import.contacts.any? %>
+        <strong>You imported <%= pluralize(@import.contacts.size, "new contact") %>:</strong><br>
+        <%= to_sentence(@import.contacts.order(:created_at).map(&:name)) %>
+      <% else %>
+        <strong>No new contacts were imported.</strong>
+      <% end %>
+    </section>
+
+    <% if @import.skipped_contacts.any?(&:name) %>
+      <section class="list--warning">
+        <strong>We skipped <%= pluralize(@import.skipped_contacts.size, "duplicate contact") %>:</strong><br>
+        <%= to_sentence(@import.skipped_contacts.order(:created_at).map(&:name)) %>
+      </section>
+    <% end %>
+  <% end %>
+
+  <footer class="push--block-start align--center">
+    <% if @import.processing? %>
+      <%= link_to "Go back", new_account_contacts_import_path(@account), class: "btn btn--primary" %>
+    <% elsif @import.processed? %>
+      <%= button_to "Undo this import", account_contacts_import_path(@account, @import), class: "btn btn--negative", method: :delete %>
+    <% else %>
+      <%= link_to "Try another import", new_account_contacts_import_path(@account), class: "btn btn--primary" %>
+    <% end %>
+  </footer>
+</div>
