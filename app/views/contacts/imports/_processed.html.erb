@@ -1,0 +1,16 @@
+<h1 class="hdg">
+  Does this look right?
+</h1>
+
+<p class="flush--top">
+  <strong>Your import is being processed</strong>. Please review these samples from the vCard to make sure it looks correct:
+</p>
+
+<section class="align--left contact-list push--bottom">
+  <%= render partial: "contacts/contact", collection: @import.contacts %>
+</section>
+
+<footer class="flex flex--gap flex--align-center flex--centered">
+  <%= button_to "Yes, looks good", account_contacts_import_path(@account, @import), class: "btn btn--primary", method: :put %>
+  <%= button_to "No, undo the import", account_contacts_import_path(@account, @import), class: "btn btn--secondary", method: :delete %>
+</footer>

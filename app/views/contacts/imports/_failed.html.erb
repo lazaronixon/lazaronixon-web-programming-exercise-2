@@ -1,0 +1,18 @@
+<h1 class="hdg">
+  We had some trouble importing that vCard.
+</h1>
+
+<p class="flush--top">
+  This is usually because the file was formatted incorrectly,
+  or it had too many contacts for us to process.
+</p>
+
+<section class="list--warning push--bottom">
+  <p><strong>To fix this, try the following...</strong></p>
+  <ol class="align--left">
+    <li>Double check that the file contains at least one contact with an email address.</li>
+    <li>Re-export the file and try importing it into HEY again.</li>
+  </ol>
+</section>
+
+<%= link_to "Try another import", new_account_contacts_import_path(@account), class: "btn btn--primary" %>

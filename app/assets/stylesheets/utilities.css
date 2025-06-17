@@ -20,16 +20,27 @@
 
 /* Utility classes */
 .align--center { text-align: center; }
+.align--left { text-align: left; }
 
+.flex { display: flex; }
 .flex-item--grow { flex-grow: 1; }
+.flex--align-center { align-items: center; }
+.flex--centered { justify-content: center; }
+.flex--gap { column-gap: .5rem; row-gap: 1rem; }
 
 .flush { margin: 0 !important; }
 .flush--block-start { margin-block-start: 0 !important; }
+.flush--block-end { margin-block-end: 0 !important; }
 
 .push { margin: var(--base-space) !important; }
 .push--block-start { margin-block-start: var(--base-space) !important; }
 .push--block-end { margin-block-end: var(--base-space) !important; }
+.push--bottom { margin-bottom: var(--base-space) !important; }
 
 .txt--break-words { word-wrap: break-word; }
+.txt--ellipsis { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
 
 .u-relative { position: relative; }
+
+.txt--subtle { color: var(--color-txt--subtle); }
+.permalink { color: inherit; }

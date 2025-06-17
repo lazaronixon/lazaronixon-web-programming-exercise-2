@@ -4,10 +4,14 @@
   --rgb-background: var(--rgb-white);
   --rgb-black: 0, 0, 0;
   --rgb-blue: 0, 116, 228;
+  --rgb-canary: 255, 245, 202;
   --rgb-gray: 226, 221, 215;
   --rgb-ink: var(--rgb-almost-black);
+  --rgb-peach: 255, 229, 218;
   --rgb-purple: 85, 34, 250;
+  --rgb-red: 201, 36, 0;
   --rgb-white: 255, 255, 255;
+  --rgb-mint: 157, 255, 236;
 
   --color-action-group-surface: rgba(var(--rgb-black), 0.03);
   --color-action-group-action: rgba(var(--rgb-black), 0.03);
@@ -18,13 +22,21 @@
   --color-border: rgba(var(--rgb-ink), 0.15);
   --color-border--solid: rgb(var(--rgb-ink));
   --color-bg--main: rgb(var(--rgb-background));
+  --color-bg--secondary: rgba(var(--rgb-blue), 0.15);
+  --color-bg--tertiary: rgba(var(--rgb-purple), 0.15);
   --color-bg--sheet: var(--color-bg--main);
   --color-bg--surface: rgba(var(--rgb-gray), 0.4);
+  --color-bg--warning: rgb(var(--rgb-canary));
+  --color-bg--warning-glint: rgb(var(--rgb-peach));
+  --color-primary: rgb(var(--rgb-mint));
   --color-secondary: rgb(var(--rgb-blue));
   --color-shadow: rgba(var(--rgb-gray), 0.5);
   --color-tertiary: rgb(var(--rgb-purple));
+  --color-negative: rgb(var(--rgb-red));
   --color-txt: rgb(var(--rgb-ink));
   --color-txt--subtle: rgba(var(--rgb-ink), 0.66);
+  --color-txt--reversed: rgb(var(--rgb-background));
+  --color-bg--flash-notice: rgba(var(--rgb-ink), 0.65);
 
   @media (prefers-color-scheme: dark) {
     --rgb-almost-black: 27, 39, 51;
@@ -32,7 +44,9 @@
     --rgb-blue: 80, 162, 255;
     --rgb-gray: 51, 60, 71;
     --rgb-ink: var(--rgb-almost-white);
+    --rgb-peach: 83, 62, 25;
     --rgb-purple: 134, 126, 255;
+    --rgb-red: 255, 120, 120;
 
     --color-action-group-surface: rgba(var(--rgb-almost-white), 0.05);
     --color-action-group-action: rgba(var(--rgb-almost-white), 0.05);
@@ -40,5 +54,8 @@
     --color-action-group-action-hovered: rgba(var(--rgb-almost-white), 0.08);
     --color-action-group-border: rgba(var(--rgb-almost-white), 0.08);
     --color-shadow: rgba(0,0,0,0.25);
+
+    --color-bg--warning: rgba(var(--rgb-peach), 0.15);
+    --color-bg--warning-glint: rgba(var(--rgb-peach), 0.1);
   }
 }

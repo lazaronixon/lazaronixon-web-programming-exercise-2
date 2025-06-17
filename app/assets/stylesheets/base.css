@@ -42,6 +42,7 @@ body {
   padding: 0.3em 0.8em;
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
 
   &:focus:not(:focus-visible) {
     outline: none;
@@ -71,6 +72,29 @@ body {
     }
   }
 }
+
+.btn--primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-always-black);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-txt--reversed);
+}
+
+.btn--negative {
+  background-color: var(--color-negative);
+  border-color: var(--color-negative);
+  color: var(--color-txt--reversed);
+}
+
+.btn--subtle {
+   color: var(--color-txt--subtle);
+   border: 1px solid var(--color-border);
+ }
 
 /* Page */
 .page {
@@ -133,6 +157,87 @@ body {
 .hdg--divider-centered {
   > span {
     padding: 0 0.25em;
+  }
+}
+
+.file-input {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg--main);
+  padding-left: 1em;
+  border-radius: 3rem;
+  border: 0;
+
+  &:hover { cursor: pointer; }
+
+  input[type="file"] { display: none; }
+}
+
+.file-input__button {
+  background-color: var(--color-bg--surface);
+  padding: 1rem 1.5rem;
+  border: 0;
+  border-radius: 0 3rem 3rem 0;
+}
+
+.file-input__text {
+  max-width: 100%;
+}
+
+/* Lists */
+.list--boxed {
+  background: linear-gradient(135deg, var(--color-bg--secondary) 0%, var(--color-bg--tertiary) 100%);
+  padding: 1em 1.5em;
+  border-radius: 1em;
+}
+
+.list--warning {
+  background: linear-gradient(135deg, var(--color-bg--warning) 0%, var(--color-bg--warning-glint) 100%);
+  padding: 1em 1.5em;
+  border-radius: 1em;
+}
+
+/* Spinner */
+.spinner {
+  display: none;
+  margin: 2rem auto;
+  width: 7rem;
+  text-align: center
+}
+
+.spinner--show .spinner {
+  display: block
+}
+
+.spinner__dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 100%;
+  display: inline-block;
+  animation: spinner-bounce 1.4s infinite ease-in-out both
+}
+
+.spinner__dot--1 {
+  animation-delay: -0.32s
+}
+
+.spinner__dot--2 {
+  border-color: var(--color-secondary);
+  animation-delay: -0.16s
+}
+
+.spinner__dot--3 {
+  border-color: var(--color-tertiary)
+}
+
+@keyframes spinner-bounce {
+  0%, 80%, 100% {
+    transform:scale(0)
+  }
+
+  40% {
+    transform:scale(1)
   }
 }
 
